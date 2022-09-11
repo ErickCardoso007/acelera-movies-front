@@ -1,28 +1,48 @@
-
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { client } from '../../service/client'
+import './home.css'
+import { Card } from '../../components/card/card'
+import { CreateMovie } from '../createMovie/createMovie'
 
-const List = () => {
-  const items = [
-    { id: 1, nome: 'filme 1' },
-    { id: 2, nome: 'filme 2' },
-    { id: 3, nome: 'filme 3' }
-  ]
+export const List = () => {
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+    client.get('/movie')
+      .then(response => {
+        setItems(response.data)
+      })
+  }, [])
+
   return (
-    <ul>
-      {items.map((item) => (
-        <li key={items}>
-          <Link to={`/movie/${item.id}`}>{item.nome}</Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      <form>
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>
+              <div>
+                <Link className='link' to={`/movie/${item.id}`}>{item.title}</Link>
+              </div>
+              <img alt='erro ao carregar imagem' className='movie' src={item.image}></img>
+            </li>
+          )
+          )}
+        </ul>
+      </form>
+    </>
   )
 }
 
 export const Home = () => {
   return (
     <>
-      <h1>Hello, User!</h1>
-      <List />
+      <Card title='All Movies' click='open'>
+        <List />
+        <div className='rei'>
+          <CreateMovie />
+        </div>
+      </Card>
     </>
   )
 }

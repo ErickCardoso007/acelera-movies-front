@@ -1,4 +1,21 @@
-.movie1{
-  margin-left: 400px;
-  margin-right: 400px;
+.link {   
+  padding: 20px;   
+  pointer-events: pointer;   
+  margin-left: 50%;   
+  position: relative;    
+  top: 20px;    
+  right: 13%;   
+  border: 1px solid black;
+ } 
+.link:hover {  
+     color: rgba(5, 5, 119, 0.805);
+} 
+.movie {   
+  height: 150px;   
+  width: 150px;   
+  margin: 10px;  
+}
+.rei{
+  padding: 2%;
+  margin-right: 18%;
 }

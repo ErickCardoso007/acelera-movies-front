@@ -1,19 +1,8 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
+import { useState } from 'react'
 import { Modal } from '../../components/modal/modal'
 import { client } from '../../service/client'
-import './movie.css'
 
-export const Movie = () => {
-  const { id } = useParams()
-  const [movie, setMovie] = useState([])
-  useEffect(() => {
-    client.get(`movie/${id}`)
-      .then(response => {
-        setMovie(response.data)
-      })
-  }, [])
-
+export const CreateMovie = () => {
   const [title, setTitle] = useState('')
   const handleChangeTitle = (e) => {
     setTitle(e.target.value)
@@ -63,6 +52,7 @@ export const Movie = () => {
   const handleChangeResume = (e) => {
     setResume(e.target.value)
   }
+
   const [image, setImage] = useState('')
   const handleChangeImage = (e) => {
     setImage(e.target.value)
@@ -77,91 +67,34 @@ export const Movie = () => {
   const handleChangeDate = (e) => {
     setDate(e.target.value)
   }
+  const data = {
+    title: title,
+    gender: gender,
+    subtitle: subtitle,
+    director: director,
+    writer: writer,
+    studio: studio,
+    actors: actors,
+    classification: classification,
+    resume: resume,
+    awards: awards,
+    image: image,
+    releaseDate: date,
+    note: note
+  }
 
-  const url = `movie/${id}`
+  const url = '/movie'
   const click = () => {
-    client.put(url, {
-      title: title,
-      gender: gender,
-      subtitle: subtitle,
-      director: director,
-      writer: writer,
-      studio: studio,
-      actors: actors,
-      classification: classification,
-      resume: resume,
-      awards: awards,
-      image: image,
-      releaseDate: date,
-      note: note
-
-    })
+    client.post(url, data)
       .then(response => {
         alert('Alteração feita com sucesso')
         location.reload()
       })
-      .catch(error => console.log(error))
   }
 
   return (
     <>
-      <Modal title='information modal' click='modal'>
-        <form className='formMovie'>
-          <ul>
-            <li>
-              <div className='lista'>
-                <p>title: {movie.title} </p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>subtitle: {movie.subtitle}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>director: {movie.director}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>gender: {movie.gender}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>date: {movie.releaseDate}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>writer: {movie.writer}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>studio: {movie.studio}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>actors: {movie.actors}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>classification: {movie.classification}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>resume: {movie.resume}</p>
-              </div>
-            </li>
-          </ul>
-        </form>
-      </Modal>
-      <Modal title='information modal' click='edit modal'>
+      <Modal title='Mew modal' click=' Create movie '>
         <form className='formEdit'>
           <ul>
             <li className='listaEdit'>
@@ -204,7 +137,7 @@ export const Movie = () => {
               <input className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' ></input>
             </li>
             <li className='liMovie'>
-              <button className='buttonMovie' type="button" onClick={click}>save</button>
+              <button className='buttonMovie' type="button" onClick={click}>create</button>
             </li>
           </ul>
         </form>

@@ -1,7 +1,7 @@
 import './modal.css'
 import { useState } from 'react'
 
-export const Modal = () => {
+export const Modal = ({ children, title, click }) => {
   const [toggle, setToggle] = useState(false)
 
   const hadleClick = () => {
@@ -9,15 +9,15 @@ export const Modal = () => {
   }
   return (
     <>
-      <button onClick={hadleClick} className='open'>Clique aqui!</button>
+      <button onClick={hadleClick} className='open'>{click}</button>
       {toggle && (
         <div className='modal-container'>
           <div className='modal'>
             <header>
-              <h2>Titulo da modal</h2>
+              <h2>{title}</h2>
               <button className='close' onClick={hadleClick}>x</button>
             </header>
-            <p>conteudo da modal</p>
+            {children}
           </div>
         </div>)
       }

@@ -1,3 +1,87 @@
-form{
+.form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.liLogin{
   padding-top: 10px;
+  margin-top: 5px;
+}
+
+.senha .input2{
+  background-color: transparent;
+  border: 1px solid rgba(5, 5, 119, 0.805);
+  border-radius: 5px;
+  color:rgba(5, 5, 119, 0.805);
+  outline: none;
+}
+.email .input1{
+  background-color: transparent;
+  border: 1px solid rgba(5, 5, 119, 0.805);
+  border-radius: 5px;
+  color:rgba(5, 5, 119, 0.805);
+  outline: none;
+}
+.senha .label2 {
+  position: absolute;
+  top: 52px;
+  left: 155px;
+  font-size: 14px;
+  color: black;
+  text-transform: capitalize;
+  transition: top 0.3s;
+  padding: 0 2px;
+  pointer-events: none;
+}
+.email .label1 {
+  position: absolute;
+  top: 18px;
+  left: 155px;
+  font-size: 14px;
+  color: black;
+  text-transform: capitalize;
+  transition: 0.3s;
+  padding: 0 2px;
+  pointer-events: none;
+}
+
+.input1:focus + .label1{
+  top: 0px;
+  font-weight: bolder;
+
+}
+
+.input2:focus + .label2{
+  top: 35px;
+  font-weight: bolder;
+
+}
+
+.input1:not(:placeholder-shown).input2:not(:focus)+ .label1{
+  color:red;
+}
+
+.buttonLogin {
+  background-color: transparent;
+  border: 2px solid #2ecc71;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+.buttonLogin:hover{
+  background-color: #2ecc71;
+  color: white;
 }
