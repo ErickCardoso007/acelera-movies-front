@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { client } from '../../service/client'
 import './home.css'
 import { Card } from '../../components/card/card'
-import { CreateMovie } from '../createMovie/createMovie'
+import { CreateMovie } from '../../components/postMovie/createMovie'
 
 export const List = () => {
   const [items, setItems] = useState([])
@@ -24,7 +24,7 @@ export const List = () => {
               <div>
                 <Link className='link' to={`/movie/${item.id}`}>{item.title}</Link>
               </div>
-              <img alt='erro ao carregar imagem' className='movie' src={item.image}></img>
+              <img alt='error image' className='movie' src={item.image}></img>
             </li>
           )
           )}
@@ -39,7 +39,7 @@ export const Home = () => {
     <>
       <Card title='All Movies' click='open'>
         <List />
-        <div className='rei'>
+        <div className='ModalPost'>
           <CreateMovie />
         </div>
       </Card>

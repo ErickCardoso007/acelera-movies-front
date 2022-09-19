@@ -90,6 +90,7 @@ export const CreateMovie = () => {
         alert('Alteração feita com sucesso')
         location.reload()
       })
+      .catch(alert('Preencha todas as lacunas!'))
   }
 
   return (
@@ -98,43 +99,43 @@ export const CreateMovie = () => {
         <form className='formEdit'>
           <ul>
             <li className='listaEdit'>
-              <input className='inputMovie' value={title} onChange={handleChangeTitle} type='text' placeholder='title'></input>
+              <input className='inputMovie' value={title} onChange={handleChangeTitle} type='text' placeholder='title' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={subtitle} onChange={handleChangeSubtitle} type='text' placeholder='subtitle'></input>
+              <input className='inputMovie' value={subtitle} onChange={handleChangeSubtitle} type='text' placeholder='subtitle' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={director} onChange={handleChangeDirector} type='text' placeholder='director'></input>
+              <input className='inputMovie' value={director} onChange={handleChangeDirector} type='text' placeholder='director' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={gender} onChange={handleChangeGender} type='text' placeholder='gender'></input>
+              <input className='inputMovie' value={gender} onChange={handleChangeGender} type='text' placeholder='gender' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={classification} onChange={handleChangeClassification} type='text' placeholder='classification'></input>
+              <input className='inputMovie' value={classification} onChange={handleChangeClassification} type='text' placeholder='classification' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={writer} onChange={handleChangeWriter} type='text' placeholder='writer'></input>
+              <input className='inputMovie' value={writer} onChange={handleChangeWriter} type='text' placeholder='writer' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={studio} onChange={handleChangeStudio} type='text' placeholder='studio' ></input>
+              <input className='inputMovie' value={studio} onChange={handleChangeStudio} type='text' placeholder='studio' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={actors} onChange={handleChangeActors} type='text' placeholder='actors' ></input>
+              <input className='inputMovie' value={actors} onChange={handleChangeActors} type='text' placeholder='actors' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={resume} onChange={handleChangeResume} type='text' placeholder='resume' ></input>
+              <input className='inputMovie' value={resume} onChange={handleChangeResume} type='text' placeholder='resume' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={awards} onChange={handleChangeAwards} type='text' placeholder='awards' ></input>
+              <input className='inputMovie' value={awards} onChange={handleChangeAwards} type='text' placeholder='awards' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={image} onChange={handleChangeImage} type='text' placeholder='image' ></input>
+              <input className='inputMovie' value={image} onChange={handleChangeImage} type='text' placeholder='image' required ></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={date} onChange={handleChangeDate} type='date' placeholder='date' ></input>
+              <input className='inputMovie' value={date} onChange={handleChangeDate} type='date' placeholder='date' required></input>
             </li>
             <li className='listaEdit'>
-              <input className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' ></input>
+              <input className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' required></input>
             </li>
             <li className='liMovie'>
               <button className='buttonMovie' type="button" onClick={click}>create</button>

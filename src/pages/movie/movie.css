@@ -6,8 +6,8 @@
 }
 .buttonMovie{
   cursor: pointer;
-  color: black;
-  background-color: #2ecc71;
+  color: rgb(255, 255, 255);
+  background-color: #1abc9c;
   border: transparent;
   border-radius: 5px;
   transition: 0.2s;
@@ -15,7 +15,7 @@
 
 }
 .buttonMovie:hover{
-  background-color: #02ff6b;
+  background-color: #14e6bc;
 }
 .formEdit{
   display: flex;
@@ -28,16 +28,37 @@
   padding: 3%;
 }
 .listaEdit {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  margin-top: 5px;
+  height: 30px;
+  padding: 5px;
 }
 .lista{
   margin-top: 5px;
   padding: 1%;
   border: 1px solid #000;
 }
-.inputMovie {
-  width: 300px;
+section{
+  padding: 2%;
+  margin-right: 18%;
+}
+.inputMovie{
+  width: 250px;
+}
+.returnButton {
+  cursor: pointer;
+  color: black;
+  background-color: #1abc9c;
+  border: transparent;
+  border-radius: 10px;
+  transition: 0.2s;
+  width: 30px;
+  height: 25px;
+}
+.returnButton:hover {
+  background-color: #14e6bc;
+}
+
+.return{
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
 }

@@ -1,8 +1,8 @@
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
-import { Card } from '../../components/card/card'
 import { client } from '../../service/client'
+import { Loginpage } from '../../components/Login/login'
 import './login.css'
 
 export const Login = () => {
@@ -30,6 +30,7 @@ export const Login = () => {
           navigate('/home')
         } else {
           alert(response.data.message)
+          location.reload()
         }
       })
       .catch(error => console.log(error))
@@ -38,19 +39,19 @@ export const Login = () => {
   return (
     <>
 
-      <Card title="Login" click="open modal">
+      <Loginpage title="Login" click="open modal">
         <form className='form'>
           <ul>
             <div className='email'>
               <li className='liLogin'>
-                <input className='input1' value={email} onChange={handleChangeEmail} type='text' required />
-                <label className='label1'>email</label>
+                <input className='input1' value={email} onChange={handleChangeEmail} placeholder='E-mail' type='text' required />
+
               </li>
             </div>
             <div className='senha'>
               <li className='liLogin'>
-                <input className='input2' value={password} onChange={handleChangeSenha} type='password' required />
-                <label className='label2'>senha</label>
+                <input className='input2' value={password} onChange={handleChangeSenha} placeholder='Password' type='password' required />
+
               </li>
             </div>
             <li className='button-login'>
@@ -58,7 +59,7 @@ export const Login = () => {
             </li>
           </ul>
         </form>
-      </Card >
+      </Loginpage >
     </>
   )
 }

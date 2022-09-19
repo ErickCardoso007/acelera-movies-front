@@ -1,7 +1,7 @@
 body{
   background-color: #d2dde4;
 }
-.card-container{
+.login-container{
   position: fixed;
   left: 0;
   top: 0;
@@ -9,9 +9,12 @@ body{
   width: 100%;
   height: 100%;
   overflow: auto;
+  padding-top: 100px;
+  
+
 }
 
-.card {
+.login {
   background-color: aliceblue;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -21,13 +24,13 @@ body{
   max-width: 500px; 
 }
 
-.card h2, .card p{
+.login h2, .login p{
   font-size: 20px;
   margin: 12px;
 
 }
 
-.card header {
+.login header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -37,9 +40,3 @@ body{
   background-color: #1abc9c;
   color: white;
 }
-
-
-
-
-
-

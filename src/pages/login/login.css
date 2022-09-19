@@ -3,85 +3,112 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.label1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 5%;
+  padding: 8%;
 }
 .button-login {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  padding-top: 40px;
 }
 
 .liLogin{
   padding-top: 10px;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
-.senha .input2{
-  background-color: transparent;
-  border: 1px solid rgba(5, 5, 119, 0.805);
-  border-radius: 5px;
-  color:rgba(5, 5, 119, 0.805);
-  outline: none;
+.email{
+  padding: 3px;
 }
-.email .input1{
-  background-color: transparent;
-  border: 1px solid rgba(5, 5, 119, 0.805);
-  border-radius: 5px;
-  color:rgba(5, 5, 119, 0.805);
-  outline: none;
-}
-.senha .label2 {
-  position: absolute;
-  top: 52px;
-  left: 155px;
-  font-size: 14px;
-  color: black;
-  text-transform: capitalize;
-  transition: top 0.3s;
-  padding: 0 2px;
-  pointer-events: none;
-}
-.email .label1 {
-  position: absolute;
-  top: 18px;
-  left: 155px;
-  font-size: 14px;
-  color: black;
-  text-transform: capitalize;
-  transition: 0.3s;
-  padding: 0 2px;
-  pointer-events: none;
-}
-
-.input1:focus + .label1{
-  top: 0px;
-  font-weight: bolder;
-
-}
-
-.input2:focus + .label2{
-  top: 35px;
-  font-weight: bolder;
-
-}
-
-.input1:not(:placeholder-shown).input2:not(:focus)+ .label1{
-  color:red;
+.senha{
+  padding: 3px;
 }
 
 .buttonLogin {
-  background-color: transparent;
-  border: 2px solid #2ecc71;
+  width: 100px;
+  background-color: #1abc9c;
+  color: white;
   border-radius: 5px;
+  border: transparent;
   cursor: pointer;
-  
+  margin-top: 2%;
 }
 .buttonLogin:hover{
-  background-color: #2ecc71;
+  background-color: #14e6bc;
   color: white;
+}
+.input1{
+  margin: 15px 25px;
+  width: 250px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #1abc9c;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: #0e6252;
+}
+
+.input1:focus, .input1:valid {
+ box-shadow: none;
+ outline: none;
+ background-position: 0 0;
+}
+
+.input1::-webkit-input-placeholder {
+ font-family: 'roboto', sans-serif;
+ -webkit-transition: all 0.2s ease-in-out;
+ transition: all 0.3s ease-in-out;
+}
+
+.input1:focus::-webkit-input-placeholder, .input1:valid::-webkit-input-placeholder {
+ color: #1abc9c;
+ font-size: 11px;
+ -webkit-transform: translateY(-14px);
+ transform: translateY(-14px);
+ visibility: visible !important;
+
+}
+.input2{
+  margin: 10px 25px;
+  width: 250px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #1abc9c;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: #0e6252;
+}
+
+.input2:focus, .input2:valid {
+ box-shadow: none;
+ outline: none;
+ background-position: 0 0;
+}
+
+.input2::-webkit-input-placeholder {
+ font-family: 'roboto', sans-serif;
+ -webkit-transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
+}
+
+.input2:focus::-webkit-input-placeholder, .input2:valid::-webkit-input-placeholder {
+ color: #1abc9c;
+ font-size: 11px;
+ -webkit-transform: translateY(-14px);
+ transform: translateY(-14px);
+ visibility: visible !important;
 }
