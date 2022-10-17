@@ -5,6 +5,7 @@
 .liMovie{
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 
 }
 .buttonMovie{
@@ -14,9 +15,7 @@
   border: transparent;
   border-radius: 5px;
   transition: 0.2s;
-
-
-
+  width: 100px;
 }
 .buttonMovie:hover{
   background-color: #14e6bc;
