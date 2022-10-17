@@ -39,18 +39,23 @@
   background-color: #1abc9c;
   color: white;
 }
-
+.buttonOpen{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
 .open{
   background-color: #1abc9c;
   color: white;
   border: 1px solid transparent;
   cursor: pointer; 
   border-radius: 2%;
-  margin-left: 43%;
-  margin-right: 43%;
+  display: flex;
+  justify-content: center;
   width: 150px;
   height: 20px;
   margin-top: 10px;
+  
 
 }
 .open:hover{

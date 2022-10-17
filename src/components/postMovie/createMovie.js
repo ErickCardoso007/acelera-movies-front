@@ -95,52 +95,54 @@ export const CreateMovie = () => {
 
   return (
     <>
-      <Modal title='Mew modal' click=' Create movie '>
-        <form className='formEdit'>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={title} onChange={handleChangeTitle} type='text' placeholder='title' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={subtitle} onChange={handleChangeSubtitle} type='text' placeholder='subtitle' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={director} onChange={handleChangeDirector} type='text' placeholder='director' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={gender} onChange={handleChangeGender} type='text' placeholder='gender' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={classification} onChange={handleChangeClassification} type='text' placeholder='classification' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={writer} onChange={handleChangeWriter} type='text' placeholder='writer' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={studio} onChange={handleChangeStudio} type='text' placeholder='studio' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={actors} onChange={handleChangeActors} type='text' placeholder='actors' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={resume} onChange={handleChangeResume} type='text' placeholder='resume' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={awards} onChange={handleChangeAwards} type='text' placeholder='awards' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={image} onChange={handleChangeImage} type='text' placeholder='image' required ></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={date} onChange={handleChangeDate} type='date' placeholder='date' required></input>
-          </div>
-          <div className='listaEdit'>
-            <input className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' required></input>
-          </div>
-          <div className='liMovie'>
-            <button className='buttonMovie' type="button" onClick={click}>create</button>
-          </div>
-        </form>
-      </Modal>
+      <section>
+        <Modal title='New modal' click='Create movie' >
+          <form className='formEdit'>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={title} onChange={handleChangeTitle} type='text' placeholder='title' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={subtitle} onChange={handleChangeSubtitle} type='text' placeholder='subtitle' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={director} onChange={handleChangeDirector} type='text' placeholder='director' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={gender} onChange={handleChangeGender} type='text' placeholder='gender' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={classification} onChange={handleChangeClassification} type='text' placeholder='classification' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={writer} onChange={handleChangeWriter} type='text' placeholder='writer' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={studio} onChange={handleChangeStudio} type='text' placeholder='studio' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={actors} onChange={handleChangeActors} type='text' placeholder='actors' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={resume} onChange={handleChangeResume} type='text' placeholder='resume' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={awards} onChange={handleChangeAwards} type='text' placeholder='awards' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={image} onChange={handleChangeImage} type='text' placeholder='image' required ></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={date} onChange={handleChangeDate} type='date' placeholder='date' required></input>
+            </div>
+            <div className='listaEdit'>
+              <input className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' required></input>
+            </div>
+            <div className='liMovie'>
+              <button className='buttonMovie' type="button" onClick={click}>create</button>
+            </div>
+          </form>
+        </Modal>
+      </section>
     </>
   )
 }

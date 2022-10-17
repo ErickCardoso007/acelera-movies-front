@@ -1,8 +1,11 @@
 
+.editModal{
+  padding-right: 10px;
+}
 .liMovie{
   display: flex;
   justify-content: center;
-  padding-top: 15px;
+
 }
 .buttonMovie{
   cursor: pointer;
@@ -11,7 +14,8 @@
   border: transparent;
   border-radius: 5px;
   transition: 0.2s;
-  width: 100px;
+
+
 
 }
 .buttonMovie:hover{
@@ -21,8 +25,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6%;
-  margin: 6%;
+  padding: 3%;
+  margin: 5%;
   
 }
 .formMovie {

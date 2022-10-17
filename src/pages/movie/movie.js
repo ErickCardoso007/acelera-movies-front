@@ -115,126 +115,106 @@ export const Movie = () => {
     <>
       <Card title='information modal' click='modal'>
         <form className='formMovie'>
-          <ul>
-            <li>
-              <div className='lista'>
-                <p>title: {movie.title} </p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>subtitle: {movie.subtitle}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>director: {movie.director}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>gender: {movie.gender}</p>
-              </div>
-            </li>
 
-            <li>
-              <div className='lista'>
-                <p>writer: {movie.writer}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>studio: {movie.studio}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>actors: {movie.actors}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>classification: {movie.classification}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>resume: {movie.resume}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>awards: {movie.awards}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>image:</p>
-                <img alt='error image' className='movie' src={movie.image}></img>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>date: {movie.releaseDate}</p>
-              </div>
-            </li>
-            <li>
-              <div className='lista'>
-                <p>note: {movie.note}</p>
-              </div>
-            </li>
-          </ul>
+          <div className='lista'>
+            <p>title: {movie.title} </p>
+          </div>
+          <div className='lista'>
+            <p>subtitle: {movie.subtitle}</p>
+          </div>
+
+          <div className='lista'>
+            <p>director: {movie.director}</p>
+          </div>
+
+          <div className='lista'>
+            <p>gender: {movie.gender}</p>
+          </div>
+
+          <div className='lista'>
+            <p>writer: {movie.writer}</p>
+          </div>
+
+          <div className='lista'>
+            <p>studio: {movie.studio}</p>
+          </div>
+
+          <div className='lista'>
+            <p>actors: {movie.actors}</p>
+          </div>
+
+          <div className='lista'>
+            <p>classification: {movie.classification}</p>
+          </div>
+
+          <div className='lista'>
+            <p>resume: {movie.resume}</p>
+          </div>
+
+          <div className='lista'>
+            <p>awards: {movie.awards}</p>
+          </div>
+
+          <div className='lista'>
+            <p>image:</p>
+            <img alt='error image' className='movie' src={movie.image}></img>
+          </div>
+
+          <div className='lista'>
+            <p>date: {movie.releaseDate}</p>
+          </div>
+
+          <div className='lista'>
+            <p>note: {movie.note}</p>
+          </div>
         </form>
         <section>
-          <Modal title='information modal' click='edit modal' >
+          <Modal title='information modal' click='edit modal' className='editModal'>
             <form className='formEdit'>
-              <ul>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={title} onChange={handleChangeTitle} type='text' placeholder='title' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={subtitle} onChange={handleChangeSubtitle} type='text' placeholder='subtitle' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={director} onChange={handleChangeDirector} type='text' placeholder='director'></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={gender} onChange={handleChangeGender} type='text' placeholder='gender'></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={classification} onChange={handleChangeClassification} type='text' placeholder='classification'></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={writer} onChange={handleChangeWriter} type='text' placeholder='writer'></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={studio} onChange={handleChangeStudio} type='text' placeholder='studio' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={actors} onChange={handleChangeActors} type='text' placeholder='actors' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={resume} onChange={handleChangeResume} type='text' placeholder='resume' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={awards} onChange={handleChangeAwards} type='text' placeholder='awards' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={image} onChange={handleChangeImage} type='text' placeholder='image' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input max='5' min='1' className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' ></input>
-                </li>
-                <li className='listaEdit'>
-                  <input className='inputMovie' value={date} onChange={handleChangeDate} type='date' placeholder='date' ></input>
-                </li>
-                <li className='liMovie'>
-                  <button className='buttonMovie' type="button" onClick={click}>save</button>
-                </li>
-              </ul>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={title} onChange={handleChangeTitle} type='text' placeholder='title' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={subtitle} onChange={handleChangeSubtitle} type='text' placeholder='subtitle' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={director} onChange={handleChangeDirector} type='text' placeholder='director'></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={gender} onChange={handleChangeGender} type='text' placeholder='gender'></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={classification} onChange={handleChangeClassification} type='text' placeholder='classification'></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={writer} onChange={handleChangeWriter} type='text' placeholder='writer'></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={studio} onChange={handleChangeStudio} type='text' placeholder='studio' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={actors} onChange={handleChangeActors} type='text' placeholder='actors' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={resume} onChange={handleChangeResume} type='text' placeholder='resume' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={awards} onChange={handleChangeAwards} type='text' placeholder='awards' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={image} onChange={handleChangeImage} type='text' placeholder='image' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input max='5' min='1' className='inputMovie' value={note} onChange={handleChangeNote} type='number' placeholder='note' ></input>
+              </li>
+              <li className='listaEdit'>
+                <input className='inputMovie' value={date} onChange={handleChangeDate} type='date' placeholder='date' ></input>
+              </li>
+              <li className='liMovie'>
+                <button className='buttonMovie' type="button" onClick={click}>save</button>
+              </li>
             </form>
           </Modal>
-
         </section>
         <div className='return'>
           <button className='returnButton' type="button" onClick={buttonReturn}><FontAwesomeIcon icon={faReply} /></button>

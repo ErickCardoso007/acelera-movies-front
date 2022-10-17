@@ -17,14 +17,16 @@ export const List = () => {
 
   return (
     <>
-      <form>
+      <form className='form-home'>
         <ul>
           {items.map((item, index) => (
             <div key={index}>
-              <div>
+              <div className='title'>
                 <Link className='link' to={`/movie/${item.id}`}>{item.title}</Link>
               </div>
-              <img alt='error image' className='movie' src={item.image}></img>
+              <div className='img'>
+                <img alt='error image' className='movie' src={item.image}></img>
+              </div>
             </div>
           )
           )}
