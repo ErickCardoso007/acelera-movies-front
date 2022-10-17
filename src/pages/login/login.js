@@ -38,26 +38,17 @@ export const Login = () => {
 
   return (
     <>
-
       <Loginpage title="Login" click="open modal">
-        <form className='form'>
-          <ul>
-            <div className='email'>
-              <li className='liLogin'>
-                <input className='input1' value={email} onChange={handleChangeEmail} placeholder='E-mail' type='text' required />
-
-              </li>
-            </div>
-            <div className='senha'>
-              <li className='liLogin'>
-                <input className='input2' value={password} onChange={handleChangeSenha} placeholder='Password' type='password' required />
-
-              </li>
-            </div>
-            <li className='button-login'>
-              <button className='buttonLogin' type="button" onClick={click}>Entrar</button>
-            </li>
-          </ul>
+        <form>
+          <div className='email'>
+            <input className='input1' value={email} onChange={handleChangeEmail} placeholder='E-mail' type='text' required />
+          </div>
+          <div className='senha'>
+            <input className='input2' value={password} onChange={handleChangeSenha} placeholder='Password' type='password' required />
+          </div>
+          <div className='button-login'>
+            <button className='buttonLogin' type="button" onClick={click}>Login</button>
+          </div>
         </form>
       </Loginpage >
     </>

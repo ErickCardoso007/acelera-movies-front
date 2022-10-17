@@ -10,7 +10,6 @@ export const App = () => {
         <Route path="/" element={<Login />} exact />
         <Route path="/home" element={<Home />} exact />
         <Route path="/movie/:id" element={<Movie />} exact />
-
       </Routes>
     </BrowserRouter>
 

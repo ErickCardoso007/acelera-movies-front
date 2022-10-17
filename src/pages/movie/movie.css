@@ -19,9 +19,11 @@
 }
 .formEdit{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 3%;
-  margin: 5%;
+  padding: 6%;
+  margin: 6%;
+  
 }
 .formMovie {
   margin: 5%;
@@ -30,18 +32,17 @@
 .listaEdit {
   height: 30px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
 }
 .lista{
   margin-top: 5px;
   padding: 1%;
   border: 1px solid #000;
 }
-section{
-  padding: 2%;
-  margin-right: 18%;
-}
+
 .inputMovie{
-  width: 250px;
+  width: 300px;
 }
 .returnButton {
   cursor: pointer;

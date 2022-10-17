@@ -20,12 +20,12 @@ export const List = () => {
       <form>
         <ul>
           {items.map((item, index) => (
-            <li key={index}>
+            <div key={index}>
               <div>
                 <Link className='link' to={`/movie/${item.id}`}>{item.title}</Link>
               </div>
               <img alt='error image' className='movie' src={item.image}></img>
-            </li>
+            </div>
           )
           )}
         </ul>
